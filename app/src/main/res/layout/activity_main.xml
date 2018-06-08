@@ -52,14 +52,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
-            android:src="@drawable/facebook" />
+            android:src="@drawable/facebook"
+            android:onClick="clickToLoginFB"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:paddingLeft="30dp"
-            android:src="@drawable/smartphone2" />
+            android:src="@drawable/smartphone2"
+            android:onClick="clickToLoginPhone"/>
     </LinearLayout>
 
 </LinearLayout>
