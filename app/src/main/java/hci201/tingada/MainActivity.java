@@ -1,5 +1,6 @@
 package hci201.tingada;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,4 +22,11 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sliderImgLoginActivity);
     }
 
+    public void clickToLoginFB(View view) {
+    }
+
+    public void clickToLoginPhone(View view) {
+        Intent intent = new Intent(this, LoginPhoneActivity.class);
+        startActivity(intent);
+    }
 }
