@@ -1,34 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="237dp"
-        android:layout_height="98dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="170dp"
-        android:layout_height="33dp"
-        android:checked="true"
-        android:text="CheckBox"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="137dp" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="103dp"
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ToggleButton"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="217dp" />
+        android:gravity="center"
+        android:text="Virtual but love is real"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/txtTitle"
+        android:textSize="20dp" />
 
-</android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/sliderImg"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorText"
+        android:text="By tapping Log In, you agree with our Terms of Service and Privacy Policy" />
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="LOG IN WITH"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:src="@drawable/facebook"
+            android:layout_marginRight="30dp"
+            android:onClick="clickToLoginFB"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:src="@drawable/smartphone2"
+            android:onClick="clickToLoginPhone"/>
+    </LinearLayout>
+
+</LinearLayout>
