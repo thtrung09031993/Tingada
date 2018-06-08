@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SliderImgLoginActivity" />
-
+        <activity android:name=".LoginPhoneActivity"/>
     </application>
 
 </manifest>
