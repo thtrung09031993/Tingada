@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Virtual but love is real"
+        android:text="Find your true love with Tingada"
         android:textStyle="bold"
         android:fontFamily="serif-monospace"
         android:textColor="@color/colorAccent"

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Tingada</string>
+    <string name="resend_code"><u>Resend Code</u></string>
 </resources>
