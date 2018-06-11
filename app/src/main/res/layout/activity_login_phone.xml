@@ -44,11 +44,14 @@
             android:src="@drawable/vietnam" />
 
         <EditText
+            android:id="@+id/txtPhone"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:inputType="phone" />
 
         <Button
+            android:id="@+id/btnSendPhone"
+            android:onClick="clickToSendPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send" />

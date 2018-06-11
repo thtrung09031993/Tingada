@@ -12,6 +12,7 @@
         <activity android:name=".SplashFirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -20,17 +21,20 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".SliderImgLoginActivity" />
-        <activity android:name=".LoginPhoneActivity"/>
+        <activity android:name=".LoginPhoneActivity" />
+        <activity android:name=".ConfirmActivity"></activity>
     </application>
 
 </manifest>
