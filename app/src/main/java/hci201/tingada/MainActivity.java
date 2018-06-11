@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickToLoginFB(View view) {
+        Intent intent = new Intent(this,HomeActivity.class);
+        startActivity(intent);
     }
 
     public void clickToLoginPhone(View view) {
