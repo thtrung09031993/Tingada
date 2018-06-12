@@ -39,8 +39,8 @@ public class ConfirmActivity extends AppCompatActivity {
         System.out.println(tmp);
         if (tmp.equals(confirmCode)) {
             Toast.makeText(this, "Confirm successfully!", Toast.LENGTH_SHORT).show();
-            //Intent intent = new Intent(this, HomeActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
         } else {
             Toast.makeText(this, "Wrong confirm code!", Toast.LENGTH_SHORT).show();
         }
