@@ -43,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void clickToProfile(View view) {
+        startActivity(new Intent(this, ProfileActivity.class));
     }
 
     public void clickToContact(View view) {
