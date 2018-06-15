@@ -42,7 +42,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".LoginFBAppActivity" />
-        <activity android:name=".ContactView"></activity>
+        <activity android:name=".SettingActivity"></activity>
     </application>
 
 </manifest>
