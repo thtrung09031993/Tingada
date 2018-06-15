@@ -47,6 +47,10 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void clickToContact(View view) {
+        startActivity(new Intent(this, ContactView.class));
     }
 
+    public void clickToFeed(View view) {
+        startActivity(new Intent(this, FeedActivity.class));
+    }
 }

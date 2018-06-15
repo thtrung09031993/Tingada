@@ -42,7 +42,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".LoginFBAppActivity" />
-        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".FeedActivity"></activity>
     </application>
 
 </manifest>

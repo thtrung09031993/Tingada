@@ -50,7 +50,6 @@
             android:layout_height="50dp"
             android:text="Messages"
             android:gravity="center"
-            android:textColor="@color/tingada"
             android:onClick="clickToContact"/>
 
         <TextView
@@ -58,6 +57,7 @@
             android:layout_height="50dp"
             android:text="Feeds"
             android:gravity="center"
+            android:textColor="@color/tingada"
             android:onClick="clickToFeed"/>
     </LinearLayout>
 
