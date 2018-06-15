@@ -5,4 +5,5 @@
     <color name="colorAccent">#fa1920</color>
     <color name="colorText">#ababab</color>
     <color name="tingada">#E2574C</color>
+    <color name="colorBgSetting">#EDEDEE</color>
 </resources>
