@@ -35,6 +35,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -48,9 +49,12 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".LoginFBAppActivity" />
-
         <activity android:name=".FindLoverActivity" />
-        <activity android:name=".SettingProfilePage"></activity>
+        <activity android:name=".SettingProfilePage" />
+        <activity
+            android:name=".TabHomeActivity"
+            android:label="@string/title_activity_tab_home"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
