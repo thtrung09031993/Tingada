@@ -31,6 +31,5 @@ public class LoginPhoneActivity extends AppCompatActivity {
             intent.putExtra("phoneNumber", txtPhone.getText().toString());
             startActivity(intent);
         }
-
     }
 }

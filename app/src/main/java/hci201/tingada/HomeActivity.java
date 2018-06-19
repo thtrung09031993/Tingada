@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         final Button btnFind = (Button) findViewById(R.id.btnFind);
+        init();
         btnFind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,10 +44,30 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    public void clickToProfile(View view) {
-    }
+    private void init(){
+        ImageButton btnProfile = (ImageButton) findViewById(R.id.btnProfile);
+        ImageButton btnContact = (ImageButton) findViewById(R.id.btnContact);
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivity(new Intent(getApplicationContext(),SettingActivity.class));
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+        btnContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivity(new Intent(getApplicationContext(),ContactView.class));
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
 
-    public void clickToContact(View view) {
-    }
+            }
+        });
 
+    }
 }
