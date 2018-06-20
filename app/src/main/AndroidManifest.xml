@@ -32,7 +32,11 @@
         <activity android:name=".FeedActivity"/>
         <activity android:name=".ContactView"/>
         <activity android:name=".FindLoverActivity" />
-        <activity android:name=".SettingProfilePage"/>
+        <activity android:name=".SettingProfilePage" />
+        <activity
+            android:name=".TabHomeActivity"
+            android:label="@string/title_activity_tab_home"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

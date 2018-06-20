@@ -1,5 +1,6 @@
 package hci201.tingada;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -58,7 +59,7 @@ public class SettingActivity extends AppCompatActivity {
 
 
     public void clickToBackSettingProfilePage(View view) {
-
+        startActivity(new Intent(this, SettingProfilePage.class));
     }
     public void setDistance() {
         distanceSeek = (SeekBar) findViewById(R.id.distanceSeek);
@@ -84,24 +85,38 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     public void clickToSetKM(View view) {
+        distanceSeek = (SeekBar) findViewById(R.id.distanceSeek);
         txtDistance = (TextView) findViewById(R.id.textDistance);
         unit = (TextView) findViewById(R.id.unit);
         btnKM = (Button) findViewById(R.id.btnKM);
         btnMI = (Button) findViewById(R.id.btnMI);
+        btnKM.setEnabled(false);
         btnKM.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        btnMI.setEnabled(true);
         btnMI.setBackgroundColor(getResources().getColor(R.color.colorText));
-        txtDistance.setText(Double.parseDouble(txtDistance.getText().toString()) / 1000 + "");
+        distanceSeek.setMax(5);
+        distanceSeek.setProgress(Integer.parseInt(txtDistance.getText().toString()) / 1000);
+        txtDistance.setText(Integer.parseInt(txtDistance.getText().toString()) / 1000 + "");
         unit.setText("Km.");
     }
 
     public void clickToSetMI(View view) {
+        distanceSeek = (SeekBar) findViewById(R.id.distanceSeek);
         txtDistance = (TextView) findViewById(R.id.textDistance);
         unit = (TextView) findViewById(R.id.unit);
         btnKM = (Button) findViewById(R.id.btnKM);
         btnMI = (Button) findViewById(R.id.btnMI);
+        btnMI.setEnabled(false);
         btnMI.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        btnKM.setEnabled(true);
         btnKM.setBackgroundColor(getResources().getColor(R.color.colorText));
-        txtDistance.setText(Double.parseDouble(txtDistance.getText().toString()) * 1000 + "");
+        distanceSeek.setMax(5000);
+        distanceSeek.setProgress(Integer.parseInt(txtDistance.getText().toString()) * 1000);
+        txtDistance.setText(Integer.parseInt(txtDistance.getText().toString()) * 1000 + "");
         unit.setText("Mi.");
+    }
+
+    public void clickToLogout(View view) {
+        startActivity(new Intent(this, MainActivity.class));
     }
 }

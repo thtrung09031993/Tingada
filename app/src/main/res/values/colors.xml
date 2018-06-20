@@ -6,4 +6,8 @@
     <color name="colorText">#ababab</color>
     <color name="tingada">#E2574C</color>
     <color name="colorBgSetting">#EDEDEE</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="underlineTab">#c8e8ff</color>
 </resources>

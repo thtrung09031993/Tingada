@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
                     public void run() {
                         try {
                             Thread.sleep(3000);
-                            startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                            startActivity(new Intent(getApplicationContext(), TabHomeActivity.class));
                             finish();
                         }
                         catch (Exception e){
