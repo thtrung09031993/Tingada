@@ -15,7 +15,7 @@ public class LoginFBAppActivity extends AppCompatActivity {
     }
 
     public void clickToLoginFBHome(View view) {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, TabHomeActivity.class);
         startActivity(intent);
 
     }
