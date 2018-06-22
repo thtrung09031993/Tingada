@@ -11,10 +11,9 @@
     android:scrollbars="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true"
     tools:context=".SettingActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="@color/colorAccent"
         android:orientation="horizontal">
 

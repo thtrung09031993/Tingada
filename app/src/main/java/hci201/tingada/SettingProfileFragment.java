@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 
@@ -15,7 +16,7 @@ import android.widget.RelativeLayout;
  * A simple {@link Fragment} subclass.
  */
 public class SettingProfileFragment extends Fragment {
-    Button settingBtn;
+    ImageView settingBtn;
 
     public SettingProfileFragment() {
         // Required empty public constructor
@@ -27,17 +28,17 @@ public class SettingProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_setting_profile, container, false);
-//        settingBtn = (Button) view.findViewById(R.id.settingBtn);
-//        settingBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(getActivity(), SettingActivity.class));
-//            }
-//        });
-//        RelativeLayout layout = (RelativeLayout) view.findViewById(R.id.frameSettingProfile);
-//        layout.addView(view);
-        return view;
+//        View view = inflater.inflate(R.layout.fragment_setting_profile, container, false);
+
+        final RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_setting_profile, container, false);
+        settingBtn = (ImageView) layout.findViewById(R.id.settingBtn);
+        settingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SettingActivity.class));
+            }
+        });
+        return layout;
     }
 
 }
