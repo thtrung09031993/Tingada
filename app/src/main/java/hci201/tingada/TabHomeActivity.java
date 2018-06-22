@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 public class TabHomeActivity extends AppCompatActivity {
     private ViewPager mViewPager;
-    private int default_tab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +27,14 @@ public class TabHomeActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.chat_tab));
 
         //Creating tab
-        final TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
+        TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
         adapter.addFragment(new SettingProfileFragment(), "");
         adapter.addFragment(new FindLoverFragment(), "");
         adapter.addFragment(new MatchingFragment(), "");
 
         mViewPager.setAdapter(adapter);
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
         tabLayout.setOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
         mViewPager.setCurrentItem(getIntent().getIntExtra("tab", 1));
     }

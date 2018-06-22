@@ -1,13 +1,15 @@
 package hci201.tingada;
 
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class TabAdapter extends FragmentPagerAdapter {
+public class TabAdapter extends FragmentStatePagerAdapter {
 
     ArrayList<Fragment> alFragments = new ArrayList<>();
     ArrayList<String> alTitles = new ArrayList<>();
@@ -19,6 +21,11 @@ public class TabAdapter extends FragmentPagerAdapter {
     public void addFragment(Fragment fragment, String title) {
         alFragments.add(fragment);
         alTitles.add(title);
+    }
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return POSITION_NONE;
     }
 
     public void replaceFragmentAtPosition (Fragment fragment, int pos) {

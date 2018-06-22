@@ -32,7 +32,12 @@ public class FindLoverFragment extends Fragment {
         btnFind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ViewPager viewPager = (ViewPager) getActivity().findViewById(R.id.container);
+                TabAdapter adapter = (TabAdapter) viewPager.getAdapter();
+                adapter.replaceFragmentAtPosition(new SearchProcessFragment(), 1);
+//                viewPager.setCurrentItem(0);
+//                viewPager.setCurrentItem(1, true);
+                adapter.notifyDataSetChanged();
             }
         });
         return layout;
