@@ -59,7 +59,9 @@ public class SettingActivity extends AppCompatActivity {
 
 
     public void clickToBackSettingProfilePage(View view) {
-        startActivity(new Intent(this, TabHomeActivity.class));
+        Intent intent = new Intent(this, TabHomeActivity.class);
+        intent.putExtra("tab", 0);
+        startActivity(intent);
     }
     public void setDistance() {
         distanceSeek = (SeekBar) findViewById(R.id.distanceSeek);

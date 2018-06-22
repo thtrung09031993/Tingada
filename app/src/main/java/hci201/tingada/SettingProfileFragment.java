@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
  */
 public class SettingProfileFragment extends Fragment {
     ImageView settingBtn;
+    ImageView profileBtn;
 
     public SettingProfileFragment() {
         // Required empty public constructor
@@ -36,6 +37,13 @@ public class SettingProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), SettingActivity.class));
+            }
+        });
+        profileBtn = (ImageView) layout.findViewById(R.id.profileBtn);
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ProfileActivity.class));
             }
         });
         return layout;

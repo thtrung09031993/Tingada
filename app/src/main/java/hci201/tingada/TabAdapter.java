@@ -21,6 +21,10 @@ public class TabAdapter extends FragmentPagerAdapter {
         alTitles.add(title);
     }
 
+    public void replaceFragmentAtPosition (Fragment fragment, int pos) {
+        alFragments.set(pos, fragment);
+    }
+
     @Override
     public Fragment getItem(int position) {
         return alFragments.get(position);
