@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,13 +30,18 @@ public class ChatActivity extends AppCompatActivity implements AdapterView.OnIte
     RecyclerView rvChatScreen;
     ChatScreenAdapter chatScreenAdapter;
     LinearLayoutManager chatLLM;
+    TextView txtGreet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        TextView txtGreet = findViewById(R.id.txtGreet);
+        txtGreet = findViewById(R.id.txtGreet);
         txtGreet.setText(getIntent().getStringExtra("person"));
+
+        if (getIntent().getIntExtra("reported", 0) == 1){
+            Toast.makeText(getApplicationContext(), "Your report has been recorded!", Toast.LENGTH_LONG).show();
+        }
 
         Spinner spinner = findViewById(R.id.spinner);
         final String[] paths = {"", "Report"};
@@ -131,7 +137,9 @@ public class ChatActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (position) {
             case 1:
                 parent.setSelection(0);
-                startActivity(new Intent(getApplicationContext(), ReportActivity.class));
+                Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
+                intent.putExtra("reportedUser", txtGreet.getText().toString());
+                startActivity(intent);
                 break;
             default:
                 break;
@@ -141,5 +149,16 @@ public class ChatActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        View view = getCurrentFocus();
+        if (view != null) { // clear text field and hide keyboard
+            view.clearFocus();
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 }

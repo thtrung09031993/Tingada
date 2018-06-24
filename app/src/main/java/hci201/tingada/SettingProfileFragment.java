@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -32,6 +33,7 @@ public class SettingProfileFragment extends Fragment {
 //        View view = inflater.inflate(R.layout.fragment_setting_profile, container, false);
 
         final RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_setting_profile, container, false);
+
         settingBtn = (ImageView) layout.findViewById(R.id.settingBtn);
         settingBtn.setOnClickListener(new View.OnClickListener() {
             @Override

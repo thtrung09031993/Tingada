@@ -37,6 +37,7 @@ public class MatchingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_matching, container, false);
+        layout.findViewById(R.id.edtSearch).clearFocus();
 
         TextView txtFeed = layout.findViewById(R.id.txtFeed);
         txtFeed.setOnClickListener(new View.OnClickListener() {
