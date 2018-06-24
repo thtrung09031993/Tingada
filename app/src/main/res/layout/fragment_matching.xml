@@ -100,6 +100,14 @@
                     android:gravity="center"/>
             </LinearLayout>
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
 
         </LinearLayout>
 
