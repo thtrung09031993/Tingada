@@ -34,7 +34,8 @@
         <activity
             android:name=".TabHomeActivity"
             android:label="@string/title_activity_tab_home"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            />
         <activity android:name=".ProfileActivity"></activity>
     </application>
 
