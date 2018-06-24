@@ -18,10 +18,8 @@
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
-        </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+            android:theme="@style/SplashTheme" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".SliderImgLoginActivity" />
         <activity android:name=".LoginPhoneActivity" />
         <activity android:name=".ConfirmActivity" />
@@ -29,14 +27,16 @@
         <activity android:name=".ResultActivity" />
         <activity android:name=".LoginFBAppActivity" />
         <activity android:name=".SettingActivity" />
-        <activity android:name=".FeedActivity"/>
-        <activity android:name=".ContactView"/>
+        <activity android:name=".FeedActivity" />
+        <activity android:name=".ContactView" />
         <activity android:name=".FindLoverActivity" />
         <activity android:name=".SettingProfilePage" />
         <activity
             android:name=".TabHomeActivity"
             android:label="@string/title_activity_tab_home"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".LoverImageSliderActivity"></activity>
     </application>
 
 </manifest>

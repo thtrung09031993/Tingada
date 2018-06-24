@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FoundResultFragment">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/sliderLoverImg"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"/>
+    <!--<ImageView-->
+        <!--android:id="@+id/mainImg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="520dp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@drawable/girl1" />-->
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="186dp"
+        android:layout_marginStart="29dp"
+        android:text="Do Boong Sun, 28"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtSchool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_alignTop="@+id/infoBtn"
+        android:text="FPT University, HCM"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtSuitable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/infoBtn"
+        android:layout_marginTop="-151dp"
+        android:text="Suitable: 80%"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/infoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="151dp"
+        android:layout_marginEnd="30dp"
+        android:src="@android:drawable/ic_dialog_info" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#E9E9E9"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/loverDelBtn"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/delete" />
+
+        <ImageView
+            android:id="@+id/loverLoveBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/love" />
+
+        <ImageView
+            android:id="@+id/loverLikeBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/like" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/downBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/infoBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="202dp"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:src="@drawable/down_img2" />
+
+    <ImageView
+        android:id="@+id/localImg"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/txtSchool"
+        android:layout_alignStart="@+id/txtName"
+        android:src="@drawable/local"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/txtKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/txtSchool"
+        android:layout_marginStart="59dp"
+        android:text="3Km from here"
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

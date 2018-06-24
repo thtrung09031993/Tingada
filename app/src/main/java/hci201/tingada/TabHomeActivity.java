@@ -24,7 +24,7 @@ public class TabHomeActivity extends AppCompatActivity {
         //Creating tab
         TabAdapter adapter = new TabAdapter(getSupportFragmentManager());
         adapter.addFragment(new SettingProfileFragment(), "");
-        adapter.addFragment(new FindLoverFragment(), "");
+        adapter.addFragment(new FoundResultFragment(), "");
         adapter.addFragment(new MatchingFragment(), "");
 
         mViewPager.setAdapter(adapter);
