@@ -18,8 +18,8 @@
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"></activity>
-        <activity android:name=".MainActivity"></activity>
+            android:theme="@style/SplashTheme" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".SliderImgLoginActivity" />
         <activity android:name=".LoginPhoneActivity" />
         <activity android:name=".ConfirmActivity" />
@@ -34,9 +34,13 @@
         <activity
             android:name=".TabHomeActivity"
             android:label="@string/title_activity_tab_home"
-            android:theme="@style/AppTheme"
-            />
-        <activity android:name=".ProfileActivity"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".PurchaseActivity"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>

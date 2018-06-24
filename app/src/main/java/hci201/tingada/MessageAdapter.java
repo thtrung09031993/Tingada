@@ -10,13 +10,12 @@ import android.widget.TextView;
 import java.util.List;
 
 
-public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.RecyclerViewHolder> {
+public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.RecyclerViewHolder> {
 
     private List<String> data;
 
 
-
-    public MatchAdapter(List<String> data) {
+    public MessageAdapter(List<String> data) {
         this.data = data;
     }
 
@@ -24,21 +23,21 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.RecyclerView
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.person, parent, false);
+        View view = inflater.inflate(R.layout.message, parent, false);
         return new RecyclerViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, int position) {
-        holder.txtUserName.setText(data.get(position));
+        holder.txtMessage.setText(data.get(position));
 
         //click event
-        holder.column.setOnClickListener(new View.OnClickListener() {
+        holder.line.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //event here
                 if (onItemClickedListener != null){
-                    onItemClickedListener.onItemClick(holder.txtUserName.getText().toString());
+                    onItemClickedListener.onItemClick(holder.txtMessage.getText().toString());
                 }
             }
         });
@@ -50,22 +49,23 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.RecyclerView
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
-        TextView txtUserName;
-        LinearLayout column;
+        TextView txtMessage;
+        LinearLayout line;
         public RecyclerViewHolder(View itemView) {
             super(itemView);
-            txtUserName = (TextView) itemView.findViewById(R.id.username);
-            column = (LinearLayout) itemView.findViewById(R.id.eachMatch);
+            txtMessage = (TextView) itemView.findViewById(R.id.messageMatch);
+            line = (LinearLayout) itemView.findViewById(R.id.eachMessage);
         }
     }
+
 
     public interface OnItemClickedListener {
         void onItemClick(String username);
     }
 
-    private OnItemClickedListener onItemClickedListener;
+    private MessageAdapter.OnItemClickedListener onItemClickedListener;
 
-    public void setOnItemClickedListener(OnItemClickedListener onItemClickedListener) {
+    public void setOnItemClickedListener(MessageAdapter.OnItemClickedListener onItemClickedListener) {
         this.onItemClickedListener = onItemClickedListener;
     }
 }

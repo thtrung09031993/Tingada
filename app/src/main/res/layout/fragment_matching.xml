@@ -107,16 +107,13 @@
                 android:orientation="horizontal">
 
             </android.support.v7.widget.RecyclerView>
-
-
         </LinearLayout>
-
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp">
 
@@ -129,6 +126,13 @@
             android:textColor="@color/tingada"
             />
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 
