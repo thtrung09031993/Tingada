@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,11 @@
     android:orientation="vertical"
     tools:context=".ChatActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:background="@color/tingada">
+        android:background="@color/tingada"
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/btnBackChat"
@@ -19,34 +19,93 @@
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/leftarrow"
-            />
+            android:background="@drawable/leftarrow" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/girlcircle"/>
+            android:background="@drawable/girlcircle" />
 
         <TextView
             android:id="@+id/txtGreet"
-            android:gravity="center"
-            android:textStyle="bold"
             android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:gravity="center"
+            android:text="aasdasd"
             android:textColor="#FFFFFF"
-            android:layout_height="match_parent"/>
+            android:textStyle="bold" />
 
 
-        <ImageView
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="160dp"
-            android:layout_gravity="center"
-            android:background="@drawable/menu"/>
+            android:layout_alignParentRight="true"
+            android:background="@drawable/menu" />
 
 
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvChatScreen"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/smile"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/gif"
+            />
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:hint="Type a message..."
+            android:padding="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textColorHint="#d3d3d3"
+            android:background="@drawable/chat_field"/>
+
+
+        <ImageButton
+            android:id="@+id/btnSendMessage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/send"
+            />
     </LinearLayout>
 
-
-</LinearLayout>
+</RelativeLayout>
