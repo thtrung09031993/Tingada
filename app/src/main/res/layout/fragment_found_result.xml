@@ -74,31 +74,31 @@
         android:layout_height="90dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="#E9E9E9"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/loverDelBtn"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginRight="50dp"
-            android:src="@drawable/delete" />
+            android:src="@drawable/sad" />
 
         <ImageView
             android:id="@+id/loverLoveBtn"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="50dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/love" />
+            android:src="@drawable/wonderful" />
 
         <ImageView
             android:id="@+id/loverLikeBtn"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/like" />
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/happy" />
 
 
     </LinearLayout>
