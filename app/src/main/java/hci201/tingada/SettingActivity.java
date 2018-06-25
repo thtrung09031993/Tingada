@@ -146,32 +146,6 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     public void clickToLogout(View view) {
-<<<<<<< HEAD
         showDialog();
-//        startActivity(new Intent(this, MainActivity.class));
-    }
-
-    public void showDialog() {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage("Are your sure?");
-        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(((Dialog) dialog).getContext(), MainActivity.class));
-            }
-        });
-        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-//        logoutDialog = new Dialog(SettingActivity.this);
-//        logoutDialog.setTitle("Tingada");
-//        logoutDialog.setContentView(R.layout.dialog);
-//        logoutDialog.show();
-=======
-        startActivity(new Intent(this, LogoutConfirmActivity.class));
->>>>>>> 5a9909ad49af713fec3a6d3765c0fdbfa4be37da
     }
 }

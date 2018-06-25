@@ -28,11 +28,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-<<<<<<< HEAD
-    implementation 'com.yahoo.mobile.client.android.util.rangeseekbar:rangeseekbar-library:0.1.0'
-    implementation 'com.crystal:crystalrangeseekbar:1.0.0'
-=======
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
->>>>>>> 5a9909ad49af713fec3a6d3765c0fdbfa4be37da
 }
