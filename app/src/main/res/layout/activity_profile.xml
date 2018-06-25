@@ -2,184 +2,377 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:scrollbars="vertical"
         android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
         tools:context=".ProfileActivity">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/colorAccent"
+            android:background="@color/tingada"
             android:orientation="horizontal">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/colorAccent"
+                android:background="@color/tingada"
+                android:onClick="clickToBackSettingProfilePage"
                 android:paddingLeft="20dp"
-                android:src="@drawable/leftarrow"
-                android:onClick="clickToBackSettingProfilePage"/>
+                android:src="@drawable/leftarrow" />
 
             <TextView
-                android:paddingLeft="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:paddingLeft="40dp"
                 android:text="Edit Profile"
-                android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/colorBgSetting">
+            android:background="@color/colorBgSetting"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="About Matching"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:paddingLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:textSize="20dp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="#FFFFFF"
                 android:paddingLeft="15dp"
-                android:layout_marginBottom="15dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="About You" />
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Favorite"
+                android:text="About You"
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:paddingLeft="15dp"
-                android:textSize="20dp"/>
-            <LinearLayout
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
                 android:background="#FFFFFF"
+                android:hint="About You"
                 android:paddingLeft="15dp"
-                android:layout_marginBottom="15dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="Add Favorite" />
-            </LinearLayout>
+                android:paddingTop="10dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Job Title"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="#FFFFFF"
+                android:hint="Add Job Title"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
                 android:text="Company"
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:paddingLeft="15dp"
-                android:textSize="20dp"/>
-            <LinearLayout
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
                 android:background="#FFFFFF"
+                android:hint="Add Company"
                 android:paddingLeft="15dp"
-                android:layout_marginBottom="15dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="Add Company" />
-            </LinearLayout>
+                android:paddingTop="10dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
                 android:text="School"
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:paddingLeft="15dp"
-                android:textSize="20dp"/>
-            <LinearLayout
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
                 android:background="#FFFFFF"
+                android:hint="Add School"
                 android:paddingLeft="15dp"
-                android:layout_marginBottom="15dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="Add School" />
-            </LinearLayout>
+                android:paddingTop="10dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Personal Hobbies"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Used for matching suitability"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <CheckBox
+                    android:id="@+id/chkMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Music" />
+
+                <LinearLayout
+                    android:id="@+id/musicGenres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rock" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rap" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pop" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Classical" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/chkMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie" />
+
+                <LinearLayout
+                    android:id="@+id/movieGenres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comedy" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anime" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Romance" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Action" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/chkSport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sport" />
+
+                <LinearLayout
+                    android:id="@+id/sportGenres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soccer" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basketball" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gym" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swimming" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/chkReading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reading" />
+
+                <LinearLayout
+                    android:id="@+id/readingGenres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Novel" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manga" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Self-help" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Politics" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
                 android:text="Gender"
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:paddingLeft="15dp"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
                 android:layout_marginBottom="15dp"
-                android:background="#FFFFFF">
+                android:background="#FFFFFF"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
                 <RadioGroup
                     android:id="@+id/rdGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp">
+
                     <RadioButton
                         android:id="@+id/rdMan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Man"
-                        android:checked="true"/>
+                        android:checked="true"
+                        android:text="Man" />
+
                     <RadioButton
                         android:id="@+id/rdWoman"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Woman"/>
+                        android:text="Woman" />
                 </RadioGroup>
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
                 android:text="Control Your Profile"
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:paddingLeft="15dp"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
+                android:paddingBottom="10dp"
                 android:paddingLeft="15dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp">
+                android:paddingTop="10dp">
+
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Don't Show My Age"
-                    android:checked="true"/>
+                    android:checked="true"
+                    android:text="Don't Show My Age" />
+
                 <CheckBox
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Make My Distance Invisible"/>
+                    android:text="Make My Distance Invisible" />
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_button"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="SAVE"/>
+
     </LinearLayout>
 </ScrollView>

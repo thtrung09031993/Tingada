@@ -53,18 +53,16 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/facebook"
             android:layout_marginRight="30dp"
             android:onClick="clickToLoginFB"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:src="@drawable/smartphone2"
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/smartphone"
             android:onClick="clickToLoginPhone"/>
     </LinearLayout>
 

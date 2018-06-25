@@ -65,7 +65,7 @@ public class SettingActivity extends AppCompatActivity {
 
 
     public void clickToBackSettingProfilePage(View view) {
-        startActivity(new Intent(this, TabHomeActivity.class));
+        finish();
     }
     public void setDistance() {
         distanceSeek = (SeekBar) findViewById(R.id.distanceSeek);
@@ -146,6 +146,7 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     public void clickToLogout(View view) {
+<<<<<<< HEAD
         showDialog();
 //        startActivity(new Intent(this, MainActivity.class));
     }
@@ -169,5 +170,8 @@ public class SettingActivity extends AppCompatActivity {
 //        logoutDialog.setTitle("Tingada");
 //        logoutDialog.setContentView(R.layout.dialog);
 //        logoutDialog.show();
+=======
+        startActivity(new Intent(this, LogoutConfirmActivity.class));
+>>>>>>> 5a9909ad49af713fec3a6d3765c0fdbfa4be37da
     }
 }

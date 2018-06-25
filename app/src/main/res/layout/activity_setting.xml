@@ -14,13 +14,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorAccent"
+        android:background="@color/tingada"
         android:orientation="horizontal">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/colorAccent"
+            android:background="@color/tingada"
             android:paddingLeft="20dp"
             android:src="@drawable/leftarrow"
             android:onClick="clickToBackSettingProfilePage"/>
@@ -65,7 +65,7 @@
             android:text="Show me"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/tingada"
             android:layout_marginBottom="10dp"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Maximum Distance"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/tingada"
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:layout_marginRight="120dp"/>
@@ -164,7 +164,7 @@
                 android:text="Age Range"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/tingada" />
             <TextView
                 android:id="@+id/txtAge"
                 android:layout_width="match_parent"
@@ -221,7 +221,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Show Distance in"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/tingada"
                     android:textSize="18dp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -245,7 +245,7 @@
                     android:id="@+id/btnMI"
                     android:layout_width="160dp"
                     android:layout_height="50dp"
-                    android:background="@color/colorAccent"
+                    android:background="@color/tingada"
                     android:enabled="false"
                     android:text="Mi."
                     android:textColor="#ffffff"
@@ -289,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:text="Legal"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/tingada"
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
@@ -348,7 +348,7 @@
                 android:layout_height="wrap_content"
                 android:text="Delete Account"
                 android:textStyle="bold"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/tingada"
                 android:textSize="18dp"
                 android:gravity="center"/>
         </LinearLayout>

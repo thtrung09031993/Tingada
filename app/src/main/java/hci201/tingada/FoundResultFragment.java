@@ -27,7 +27,7 @@ public class FoundResultFragment extends Fragment {
 
     ImageView btnShowInfo, downBtn, localImg, delBtn, loveBtn, likeBtn;
     ViewPager mainImg;
-    TextView txtName, txtKm;
+    TextView txtName, txtKm, txtSchool, txtSuit;
     ViewPager viewPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
@@ -86,6 +86,8 @@ public class FoundResultFragment extends Fragment {
         btnShowInfo = (ImageView) layout.findViewById(R.id.infoBtn);
         downBtn = (ImageView) layout.findViewById(R.id.downBtn);
         txtName = (TextView) layout.findViewById(R.id.txtName);
+        txtSchool = (TextView) layout.findViewById(R.id.txtSchool);
+        txtSuit = (TextView) layout.findViewById(R.id.txtSuitable);
         mainImg = (ViewPager) layout.findViewById(R.id.sliderLoverImg);
         localImg = (ImageView) layout.findViewById(R.id.localImg);
         txtKm = (TextView) layout.findViewById(R.id.txtKm);
@@ -93,12 +95,15 @@ public class FoundResultFragment extends Fragment {
             @Override
             public void onClick(View v) {
                mainImg.requestLayout();
-               mainImg.getLayoutParams().height = 1300;
+               mainImg.getLayoutParams().height = 1100;
                txtName.setTextColor(Color.parseColor("BLACK"));
+               txtSchool.setVisibility(View.INVISIBLE);
+               txtSuit.setVisibility(View.INVISIBLE);
                localImg.setVisibility(View.VISIBLE);
                txtKm.setVisibility(View.VISIBLE);
                downBtn.setVisibility(View.VISIBLE);
                btnShowInfo.setVisibility(View.INVISIBLE);
+
             }
         });
         downBtn.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +116,8 @@ public class FoundResultFragment extends Fragment {
                 mainImg.requestLayout();
                 mainImg.getLayoutParams().height = 1900;
                 txtName.setTextColor(Color.parseColor("WHITE"));
+                txtSchool.setVisibility(View.VISIBLE);
+                txtSuit.setVisibility(View.VISIBLE);
             }
         });
 
