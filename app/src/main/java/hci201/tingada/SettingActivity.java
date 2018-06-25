@@ -18,17 +18,16 @@ public class SettingActivity extends AppCompatActivity {
 
     Switch  menSwt;
     Switch  womenSwt;
-    SeekBar distanceSeek;
-    TextView txtDistance;
-    TextView unit;
-    Button btnKM;
-    Button btnMI;
+    SeekBar distanceSeek, ageSeek;
+    TextView txtDistance, unit, txtAge;
+    Button btnKM, btnMI;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         switchGender();
         setDistance();
+        setAge();
     }
 
     public void switchGender() {
@@ -80,6 +79,29 @@ public class SettingActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 txtDistance = (TextView) findViewById(R.id.textDistance);
                 txtDistance.setText(progressChangedValue + "");
+            }
+        });
+    }
+
+    public void setAge() {
+        ageSeek = findViewById(R.id.ageSeek);
+        ageSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progressChangedValue = 0;
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressChangedValue = progress;
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                txtAge = (TextView) findViewById(R.id.txtAge);
+                txtAge.setText("18-" + (progressChangedValue + 18));
             }
         });
     }
