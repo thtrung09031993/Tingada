@@ -21,7 +21,6 @@ public class LoginFBAppActivity extends AppCompatActivity {
     }
 
     public void clickToBackLoginPage(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        finish();
     }
 }

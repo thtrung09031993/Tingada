@@ -34,6 +34,7 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:gravity="center"
             android:maxLength="1" />
 
         <EditText
@@ -41,6 +42,7 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:gravity="center"
             android:maxLength="1" />
 
         <EditText
@@ -48,6 +50,7 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:gravity="center"
             android:maxLength="1" />
 
         <EditText
@@ -55,6 +58,7 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:gravity="center"
             android:maxLength="1" />
     </LinearLayout>
 

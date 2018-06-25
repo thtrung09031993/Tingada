@@ -28,9 +28,7 @@ public class ReportActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ChatActivity.class);
-                intent.putExtra("person", txtUser.getText().toString());
-                startActivity(intent);
+                finish();
             }
         });
 

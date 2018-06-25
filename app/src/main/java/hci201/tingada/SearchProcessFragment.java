@@ -33,7 +33,7 @@ public class SearchProcessFragment extends Fragment {
             public void run() {
                 ViewPager viewPager = (ViewPager) getActivity().findViewById(R.id.container);
                 TabAdapter adapter = (TabAdapter) viewPager.getAdapter();
-                adapter.replaceFragmentAtPosition(new FindLoverFragment(), 1);
+                adapter.replaceFragmentAtPosition(new FoundResultFragment(), 1);
                 adapter.notifyDataSetChanged();
             }
         };

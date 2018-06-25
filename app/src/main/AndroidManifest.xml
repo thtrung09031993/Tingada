@@ -40,8 +40,11 @@
             android:name=".PurchaseActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".ReportActivity" android:theme="@style/Theme.AppCompat.Dialog"></activity>
-        <activity android:name=".LoverImageSliderActivity"></activity>
+        <activity
+            android:name=".ReportActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".LoverImageSliderActivity" />
+        <activity android:name=".LogoutConfirmActivity" android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>

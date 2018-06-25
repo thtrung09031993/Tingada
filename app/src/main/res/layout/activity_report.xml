@@ -92,36 +92,36 @@
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:textColor="#000000"
             android:checked="true"
+            android:buttonTint="@color/tingada"
             android:text="This is a fake account!" />
 
         <CheckBox
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:textColor="#000000"
             android:checked="true"
+            android:buttonTint="@color/tingada"
             android:text="This person is annoying me!" />
 
         <CheckBox
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:textColor="#000000"
             android:checked="true"
+            android:buttonTint="@color/tingada"
             android:text="They're pretending to be me or someone I know!" />
 
         <CheckBox
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:textColor="#000000"
             android:checked="true"
+            android:buttonTint="@color/tingada"
             android:text="Sexual harrasment!" />
 
         <TextView

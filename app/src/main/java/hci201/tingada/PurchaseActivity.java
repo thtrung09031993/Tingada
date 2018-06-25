@@ -51,9 +51,7 @@ public class PurchaseActivity extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),TabHomeActivity.class);
-                intent.putExtra("tab", 2);
-                startActivity(intent);
+                finish();
             }
         });
     }

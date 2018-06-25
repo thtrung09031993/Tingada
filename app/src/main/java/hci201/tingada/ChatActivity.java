@@ -103,9 +103,7 @@ public class ChatActivity extends AppCompatActivity implements AdapterView.OnIte
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TabHomeActivity.class);
-                intent.putExtra("tab", 2);
-                startActivity(intent);
+                finish();
             }
         });
 
