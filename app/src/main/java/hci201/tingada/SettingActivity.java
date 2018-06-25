@@ -1,5 +1,8 @@
 package hci201.tingada;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -18,18 +21,21 @@ public class SettingActivity extends AppCompatActivity {
 
     Switch  menSwt;
     Switch  womenSwt;
-    SeekBar distanceSeek;
-    TextView txtDistance;
+    SeekBar distanceSeek, ageSeek;
+    TextView txtDistance, txtAge;
     TextView unit;
     Button btnKM;
     Button btnMI;
+    private Dialog logoutDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         switchGender();
         setDistance();
+        setAge();
     }
+
 
     public void switchGender() {
         menSwt = (Switch) findViewById(R.id.menSwt);
@@ -84,6 +90,29 @@ public class SettingActivity extends AppCompatActivity {
         });
     }
 
+    public void setAge() {
+        ageSeek = (SeekBar) findViewById(R.id.ageSeek);
+        ageSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progressChangedValue = 0;
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressChangedValue = progress;
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                txtAge = (TextView) findViewById(R.id.txtAge);
+                txtAge.setText("18-" + progressChangedValue);
+            }
+        });
+    }
+
     public void clickToSetKM(View view) {
         distanceSeek = (SeekBar) findViewById(R.id.distanceSeek);
         txtDistance = (TextView) findViewById(R.id.textDistance);
@@ -117,6 +146,28 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     public void clickToLogout(View view) {
-        startActivity(new Intent(this, MainActivity.class));
+        showDialog();
+//        startActivity(new Intent(this, MainActivity.class));
+    }
+
+    public void showDialog() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Are your sure?");
+        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(((Dialog) dialog).getContext(), MainActivity.class));
+            }
+        });
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+//        logoutDialog = new Dialog(SettingActivity.this);
+//        logoutDialog.setTitle("Tingada");
+//        logoutDialog.setContentView(R.layout.dialog);
+//        logoutDialog.show();
     }
 }

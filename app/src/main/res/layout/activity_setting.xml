@@ -166,6 +166,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorAccent" />
             <TextView
+                android:id="@+id/txtAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="18-32"
@@ -174,9 +175,12 @@
                 android:gravity="right"/>
             </LinearLayout>
             <SeekBar
-                android:id="@+id/seekBar1"
+                android:id="@+id/ageSeek"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:min="18"
+                android:progress="32"
+                android:max="32"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
