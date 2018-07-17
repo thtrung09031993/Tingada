@@ -57,16 +57,13 @@ public class FoundResultFragment extends Fragment {
                    currentPage = -1;
                }
                viewPager.setCurrentItem(++currentPage, true);
+                Toast.makeText(getContext(), "This person will be removed in my matching list", Toast.LENGTH_SHORT).show();
             }
         });
         likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (currentPage == 0) {
-                    currentPage = NUM_PAGES;
-                }
-                viewPager.setCurrentItem(--currentPage, true);
+                startActivity(new Intent(layout.getContext(), NotificationActivity.class));
             }
         });
 
@@ -78,7 +75,7 @@ public class FoundResultFragment extends Fragment {
                     currentPage = NUM_PAGES;
                 }
                 viewPager.setCurrentItem(--currentPage, true);
-                Toast.makeText(getContext(), "Your priority will increase in her matching list", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "You have added her. Waiting for confirm", Toast.LENGTH_SHORT).show();
 
             }
         });

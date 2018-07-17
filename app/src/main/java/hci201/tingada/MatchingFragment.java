@@ -74,13 +74,13 @@ public class MatchingFragment extends Fragment {
         recyclerViewMatch.setAdapter(matchAdapter);
 
 
-        ImageButton btnPurchase = layout.findViewById(R.id.btnPurchase);
-        btnPurchase.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), PurchaseActivity.class));
-            }
-        });
+//        ImageButton btnPurchase = layout.findViewById(R.id.btnPurchase);
+//        btnPurchase.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getActivity(), PurchaseActivity.class));
+//            }
+//        });
 
         RecyclerView recyclerViewMessage = (RecyclerView) layout.findViewById(R.id.rvMessage);
         List<String> messageData = new ArrayList<>();

@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SearchProcessFragment">
+    tools:context=".SearchProcessFragment"
+    android:background="#ffffff">
 
     <TextView
-        android:text="Searching for people near you..."
+        android:text="Searching for suitable people near you..."
         android:paddingTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

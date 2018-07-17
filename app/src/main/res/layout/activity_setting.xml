@@ -325,10 +325,15 @@
                 android:textSize="18dp"
                 android:gravity="center"/>
         </LinearLayout>
-        <ImageView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/tingada_logo"/>
+            android:text="Hobby Chat"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            android:textSize="50dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

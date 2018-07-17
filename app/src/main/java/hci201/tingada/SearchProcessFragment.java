@@ -27,7 +27,7 @@ public class SearchProcessFragment extends Fragment {
                              Bundle savedInstanceState) {
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_search_process, container, false);
         ImageView imgSearch = layout.findViewById(R.id.imgSearch);
-        Glide.with(this).load(R.drawable.heart_search).into(imgSearch);
+        Glide.with(this).load(R.drawable.search).into(imgSearch);
         final  Runnable switchView = new Runnable() {
             @Override
             public void run() {

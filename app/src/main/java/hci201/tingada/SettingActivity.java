@@ -16,8 +16,7 @@ import hci201.tingada.R;
 
 public class SettingActivity extends AppCompatActivity {
 
-    Switch  menSwt;
-    Switch  womenSwt;
+    Switch  menSwt, womenSwt;
     SeekBar distanceSeek, ageSeek;
     TextView txtDistance, unit, txtAge;
     Button btnKM, btnMI;
