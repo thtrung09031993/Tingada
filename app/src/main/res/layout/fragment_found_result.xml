@@ -75,14 +75,6 @@
         android:orientation="horizontal"
         android:gravity="center">
 
-        <ImageView
-            android:id="@+id/loverDelBtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="80dp"
-            android:src="@drawable/remove_friend" />
 
         <ImageView
             android:id="@+id/loverLoveBtn"

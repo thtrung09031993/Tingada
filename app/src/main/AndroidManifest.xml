@@ -53,7 +53,8 @@
             android:name=".NotificationActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".ListRequestFriendActivity" />
-        <activity android:name=".HintActivity"></activity>
+        <activity android:name=".HintActivity" />
+        <activity android:name=".SearchResultActivity" android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>

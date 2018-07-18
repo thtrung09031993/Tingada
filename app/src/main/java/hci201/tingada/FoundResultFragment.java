@@ -25,7 +25,7 @@ import java.util.ArrayList;
  */
 public class FoundResultFragment extends Fragment {
 
-    ImageView btnShowInfo, downBtn, localImg, delBtn, loveBtn, likeBtn;
+    ImageView btnShowInfo, downBtn, localImg, loveBtn, likeBtn;
     ViewPager mainImg;
     TextView txtName, txtKm, txtSchool, txtSuit;
     ViewPager viewPager;
@@ -41,25 +41,15 @@ public class FoundResultFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        startActivity(new Intent(getContext(), SearchResultActivity.class));
         final RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_found_result, container, false);
         final LinearLayout layout1 = (LinearLayout) inflater.inflate(R.layout.activity_lover_image_slider, container, false);
         viewPager = (ViewPager) layout.findViewById(R.id.sliderLoverImg);
         LoverImageSliderActivity loverActivity = new LoverImageSliderActivity(getContext());
         viewPager.setAdapter(loverActivity);
-        delBtn = (ImageView) layout.findViewById(R.id.loverDelBtn);
         loveBtn = (ImageView) layout.findViewById(R.id.loverLoveBtn);
         likeBtn = (ImageView) layout.findViewById(R.id.loverLikeBtn);
         NUM_PAGES = loverActivity.getCount();
-        delBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               if (currentPage == (NUM_PAGES - 1)) {
-                   currentPage = -1;
-               }
-               viewPager.setCurrentItem(++currentPage, true);
-                Toast.makeText(getContext(), "This person will be removed in my matching list", Toast.LENGTH_SHORT).show();
-            }
-        });
         likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,8 +105,6 @@ public class FoundResultFragment extends Fragment {
                 txtSuit.setVisibility(View.VISIBLE);
             }
         });
-
-
         return layout;
     }
 
