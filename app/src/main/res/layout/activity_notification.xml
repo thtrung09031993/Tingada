@@ -8,22 +8,29 @@
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    android:padding="20dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nickname: Edward"
+        android:text="Nickname: Adele \n Age: 22"
         android:textColor="@color/colorAccent"
         android:textSize="25dp"
         android:textStyle="bold"
         android:gravity="center"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/girl2_circle" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="He want to chat with you. Suitability between you and Edward is 80%"
+        android:text="She want to chat with you. Suitability between you and Adele is 80%"
         android:textSize="20dp"
         android:gravity="center"
+        android:textColor="#000000"
         android:layout_marginBottom="10dp"/>
     <TextView
         android:layout_width="match_parent"

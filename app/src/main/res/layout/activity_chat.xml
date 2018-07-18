@@ -34,7 +34,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="150dp"
             android:gravity="center"
-            android:text="aasdasd"
+            android:text="Adele"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
 

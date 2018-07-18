@@ -63,20 +63,18 @@ public class FoundResultFragment extends Fragment {
         likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(layout.getContext(), NotificationActivity.class));
+                startActivity(new Intent(layout.getContext(), ListRequestFriendActivity.class));
             }
         });
 
         loveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (currentPage == 0) {
                     currentPage = NUM_PAGES;
                 }
                 viewPager.setCurrentItem(--currentPage, true);
                 Toast.makeText(getContext(), "You have added her. Waiting for confirm", Toast.LENGTH_SHORT).show();
-
             }
         });
 
