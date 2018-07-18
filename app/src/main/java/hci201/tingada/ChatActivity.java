@@ -2,28 +2,29 @@ package hci201.tingada;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import android.graphics.Color;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tooltip.Tooltip;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class ChatActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -31,11 +32,15 @@ public class ChatActivity extends AppCompatActivity implements AdapterView.OnIte
     ChatScreenAdapter chatScreenAdapter;
     LinearLayoutManager chatLLM;
     TextView txtGreet;
+    ImageButton btnTip;
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+       btnTip = findViewById(R.id.btnTip);
+
         txtGreet = findViewById(R.id.txtGreet);
         txtGreet.setText(getIntent().getStringExtra("person"));
 
@@ -126,6 +131,28 @@ public class ChatActivity extends AppCompatActivity implements AdapterView.OnIte
                         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
                     }
                 }
+            }
+        });
+
+        btnTip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Tooltip tooltip = new Tooltip.Builder(btnTip)
+                        .setText("You and her both like watching movies!\n" +
+                                "Why don't you ask her out to watch La La Land?")
+                        .setTextColor(Color.WHITE)
+                        .setGravity(Gravity.BOTTOM)
+                        .setCornerRadius(20f)
+                        .setDismissOnClick(true).show();
+
+                Runnable dismiss = new Runnable() {
+                    @Override
+                    public void run() {
+                        tooltip.dismiss();
+                    }
+                };
+
+                handler.postDelayed(dismiss, 3000);
             }
         });
     }

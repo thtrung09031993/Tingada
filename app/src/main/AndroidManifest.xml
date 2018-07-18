@@ -52,7 +52,8 @@
         <activity
             android:name=".NotificationActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name=".ListRequestFriendActivity"></activity>
+        <activity android:name=".ListRequestFriendActivity" />
+        <activity android:name=".HintActivity"></activity>
     </application>
 
 </manifest>
